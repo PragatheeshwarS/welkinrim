@@ -22,6 +22,8 @@ function submitForm() {
     var company = document.getElementById("company").value;
     var phone = document.getElementById("phone").value;
 
+
+
     console.log(name,emailid,company,phone);
     window.alert("Thank you for your interest in Welkinrim Technologies. We'll contact you soon.");
 
@@ -31,7 +33,15 @@ function submitForm() {
 }
 
 const saveMessages = (name, emailid, company , phone) => {
-    var newContactForm = contactFormDB.push();
+    var newContactForm = contactFormDB.push()
+    .then(() => {
+        // Data successfully sent to Firebase, now trigger PDF download
+        downloadPDF();
+    })
+    .catch(error => {
+        console.error('Error sending data to Firebase:', error);
+        // Handle error scenario
+    });
     console.log("data being pushed");
     newContactForm.set({
         name: name,
@@ -40,3 +50,12 @@ const saveMessages = (name, emailid, company , phone) => {
         company: company,
     });
 };
+function downloadPDF() {
+    const pdfUrl = 'document.pdf';
+    const a = document.createElement('a');
+    a.href = pdfUrl;
+    a.download = 'document.pdf'; // Specify the filename for the downloaded file
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
