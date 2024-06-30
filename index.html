@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELKINRIM TECHNOLOGIES</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script> -->
+    <script src="connection.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="36x36">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="logo">
+                <img src="logo.png" alt="WELKINRIM TECHNOLOGIES">
+            </div> -->
+        </div>
+    </header>
+
+    <main>
+        <div class="this-is-background">
+            <div class="image-div">
+                <img src="background.png">
+            </div>
+        </div>
+        <section class="intro" style="width: 100vw;">
+            <div class="container">
+                <h2>Welcome to <span class="write" id="writing-text" style="color: rgb(214, 214, 81);"></span></h2>
+                <!-- <div class="logo">
+                    <img src="Logo-for-Tshirt.png" alt="WELKINRIM TECHNOLOGIES">
+                </div> -->
+                <p>Thank You for reaching to us, we are extremely happy to answer your queries. Please mail us your query at company mail or reach us through the form.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Arun Rajesh">
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="87657 99898">
+
+                        <label for="email">Email-ID:</label>
+                        <input type="email" id="email" name="email" placeholder="Arunrajesh@anifasteels.com">
+
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" placeholder="Anifa Steels">
+
+                        <button type="submit" onclick="submitForm()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WELKINRIM TECHNOLOGIES PVT.LTD All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
