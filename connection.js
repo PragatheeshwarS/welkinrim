@@ -34,21 +34,21 @@ function submitForm() {
 
 const saveMessages = (name, emailid, company , phone) => {
     var newContactForm = contactFormDB.push()
-    .then(() => {
-        // Data successfully sent to Firebase, now trigger PDF download
-        downloadPDF();
-    })
-    .catch(error => {
-        console.error('Error sending data to Firebase:', error);
-        // Handle error scenario
-    });
-    console.log("data being pushed");
     newContactForm.set({
         name: name,
         emailid: emailid,
         phone: phone,
         company: company,
     });
+    // .then(() => {
+        // Data successfully sent to Firebase, now trigger PDF download
+    downloadPDF();
+    // })
+    // .catch(error => {
+    //     console.error('Error sending data to Firebase:', error);
+    //     // Handle error scenario
+    // });
+    console.log("data being pushed");
 };
 function downloadPDF() {
     const pdfUrl = 'document.pdf';
