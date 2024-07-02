@@ -51,10 +51,10 @@ const saveMessages = (name, emailid, company , phone) => {
     console.log("data being pushed");
 };
 function downloadPDF() {
-    const pdfUrl = 'document.pdf';
+    const pdfUrl = 'Welkinrim brochure.pdf';
     const a = document.createElement('a');
     a.href = pdfUrl;
-    a.download = 'document.pdf'; // Specify the filename for the downloaded file
+    a.download = 'Welkinrim brochure.pdf'; // Specify the filename for the downloaded file
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
